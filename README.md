@@ -40,6 +40,11 @@ Create a `.env` file in the root directory with the following variables:
 SUPABASE_URL=your_supabase_project_url
 SUPABASE_ANON_KEY=your_supabase_anon_key
 GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_APP_ID=your_firebase_app_id
+FIREBASE_SENDER_ID=your_firebase_sender_id
+FIREBASE_PROJECT_ID=your_firebase_project_id
+FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
 ```
 
 **Important:** You'll need access to the Supabase database. Contact the project owner to:
@@ -81,8 +86,8 @@ Replace `YOUR_MAPBOX_TOKEN_HERE` in the following files with your actual Mapbox 
 ### 7. Run the App
 
 ```bash
-# For development
-flutter run
+# For development with environment variables
+flutter run --dart-define=FIREBASE_API_KEY=your_firebase_api_key --dart-define=FIREBASE_APP_ID=your_firebase_app_id --dart-define=FIREBASE_SENDER_ID=your_firebase_sender_id --dart-define=FIREBASE_PROJECT_ID=your_firebase_project_id --dart-define=FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
 
 # For specific platforms
 flutter run -d android

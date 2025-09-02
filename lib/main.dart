@@ -217,11 +217,11 @@ void main() async {
     await Firebase.initializeApp(
       // Add options to ensure proper initialization
       options: const FirebaseOptions(
-        apiKey: 'AIzaSyCUlJ5M_Y-md0vH_p67cLyFFtktoY4fWc0',
-        appId: '1:730150888585:ios:45fe858cfd0716d6d55258',
-        messagingSenderId: '730150888585',
-        projectId: 'myarea-app',
-        storageBucket: 'myarea-app.firebasestorage.app',
+        apiKey: String.fromEnvironment('FIREBASE_API_KEY'),
+        appId: String.fromEnvironment('FIREBASE_APP_ID'),
+        messagingSenderId: String.fromEnvironment('FIREBASE_SENDER_ID'),
+        projectId: String.fromEnvironment('FIREBASE_PROJECT_ID'),
+        storageBucket: String.fromEnvironment('FIREBASE_STORAGE_BUCKET'),
       ),
     );
     print('Firebase initialized');
