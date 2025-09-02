@@ -42,7 +42,24 @@ SUPABASE_ANON_KEY=your_supabase_anon_key
 GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 ```
 
-### 4. API Keys Configuration
+**Important:** You'll need access to the Supabase database. Contact the project owner to:
+1. Get added as a collaborator to the Supabase project, OR
+2. Get the database schema to set up your own development database
+
+### 4. Database Setup Options
+
+#### Option A: Use Shared Database (Recommended)
+- Ask the project owner to add you as a collaborator in Supabase
+- Use the provided Supabase URL and anon key
+- You'll have access to real data for development
+
+#### Option B: Create Your Own Database
+- Create a new Supabase project
+- Import the database schema (ask the project owner for schema export)
+- Use your own Supabase credentials
+- Note: You'll need to populate with test data
+
+### 5. API Keys Configuration
 
 #### Mapbox Token
 Replace `YOUR_MAPBOX_TOKEN_HERE` in the following files with your actual Mapbox public token:
@@ -54,14 +71,14 @@ Replace `YOUR_MAPBOX_TOKEN_HERE` in the following files with your actual Mapbox 
 - Add your `google-services.json` to `android/app/`
 - Add your `GoogleService-Info.plist` to `ios/Runner/`
 
-### 5. Supabase Setup
+### 6. Supabase Setup
 
 1. Create a new Supabase project
 2. Set up authentication providers (Google, Apple, etc.)
 3. Configure your database schema
 4. Update the Supabase URL and keys in your `.env` file
 
-### 6. Run the App
+### 7. Run the App
 
 ```bash
 # For development
